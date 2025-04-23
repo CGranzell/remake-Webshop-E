@@ -1,0 +1,6 @@
+@remake.Server_HostAddress = http://localhost:5193
+
+GET {{remake.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
