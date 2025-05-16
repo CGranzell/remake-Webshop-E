@@ -1,4 +1,4 @@
-﻿namespace remake.Server.Entities
+﻿namespace remake.Server.Models
 {
     public class AppUser
     {
@@ -6,6 +6,6 @@
 
         public required string UserName { get; set; }
 
-        public string UserEmail { get; set; }
+
     }
 }
