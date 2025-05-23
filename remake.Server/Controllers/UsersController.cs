@@ -30,5 +30,19 @@ namespace remake.Server.Controllers
             }
             return user;
         }
+
+        [HttpPost]
+        public async Task<ActionResult<AppUser>> CreateUser(AppUser user)
+        {
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+        }
     }
 }
