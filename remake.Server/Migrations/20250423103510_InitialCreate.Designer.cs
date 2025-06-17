@@ -10,7 +10,7 @@ using remake.Server.Data;
 
 namespace remake.Server.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(Data.AppDbContext))]
     [Migration("20250423103510_InitialCreate")]
     partial class InitialCreate
     {
