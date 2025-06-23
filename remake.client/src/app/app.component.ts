@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService, User } from './users/user.service'; 
 
 
 
@@ -10,24 +9,14 @@ import { UserService, User } from './users/user.service';
 })
 export class AppComponent implements OnInit {
 
-  users: User[] = [] 
+
   
   
-  constructor(private userService: UserService) {}
+  constructor() {}
   
   ngOnInit() {
     
-    this.userService.getUsers().subscribe({
-      
-      next: (data) => {
-        this.users = data;
-        console.log('Users fetched successfully:', data);
-        
-      },
-      error: (err) => { 
-        console.error('Error fetching users:', err);
-      }
-    })
+   
   }
 }
   

@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+        Användarnamn:
+        <input type="text" formControlName="userName"/>
+    </label>
+     <label>
+        Lösenord:
+        <input type="password" formControlName="password"/>
+     </label>    
+     <button type="submit">Logga in </button>
+     <p *ngIf="error" style="color:red;">{{ error }}</p>
+</form>
