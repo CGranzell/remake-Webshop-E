@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <a class="navbar-brand" routerLink="/">MittProjekt</a>
+
+  <div class="ms-auto">
+    <button
+      class="btn btn-outline-primary"
+      *ngIf="!isLoggedIn(); else logoutBtn"
+      (click)="openLoginModal()"
+    >
+      Logga in
+    </button>
+
+    <ng-template #logoutBtn>
+      <button class="btn btn-outline-danger" (click)="logout()">Logga ut</button>
+    </ng-template>
+  </div>
+</nav>

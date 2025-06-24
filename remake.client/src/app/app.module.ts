@@ -7,22 +7,29 @@ import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { AuthInterceptor } from '../core/interceptors/auth.interceptor';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { LandingComponent } from './pages/landing/landing.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { NgbModalModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     DashboardComponent,
-    LandingComponent
+    LandingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule,
     ReactiveFormsModule,
-    AuthModule
+    AuthModule,
+    NgbModule,
+    NgbNavModule,
+    NgbModalModule,
+    FormsModule,
   ],
   providers: [
     provideHttpClient(),
