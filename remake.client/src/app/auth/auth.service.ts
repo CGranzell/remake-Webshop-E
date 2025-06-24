@@ -32,7 +32,7 @@ export class AuthService {
     }
 
     getToken(): string | null {
-        console.log(`Retrieving token from localStorage: ${this.tokenKey}`);
+        // console.log(`Retrieving token from localStorage: ${this.tokenKey}`);
         
         return localStorage.getItem(this.tokenKey);
     }
