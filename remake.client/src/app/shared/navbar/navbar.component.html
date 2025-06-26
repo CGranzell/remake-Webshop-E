@@ -1,10 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
-  <a class="navbar-brand" routerLink="/">MittProjekt</a>
+  <a class="navbar-brand" routerLink="/">Webshop-E</a>
+ 
 
+ <div class="ms-auto d-flex align-items-center gap-2">
+  <div *ngIf="isLoggedIn">
+    <span>{{ username }}</span>
+  </div>
   <div class="ms-auto">
     <button
       class="btn btn-outline-primary"
-      *ngIf="!isLoggedIn(); else logoutBtn"
+      *ngIf="!isLoggedIn; else logoutBtn"
       (click)="openLoginModal()"
     >
       Logga in
@@ -13,5 +18,6 @@
     <ng-template #logoutBtn>
       <button class="btn btn-outline-danger" (click)="logout()">Logga ut</button>
     </ng-template>
+  </div>
   </div>
 </nav>
